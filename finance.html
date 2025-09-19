@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدیریت سالن زیبایی - مالی</title>
+    
+    <!-- Bootstrap RTL -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    
+    <!-- Vazir Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="theme-light">
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <i class="bi bi-sun-fill light-icon"></i>
+        <i class="bi bi-moon-fill dark-icon"></i>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="brand-container">
+                <i class="fas fa-cut brand-icon"></i>
+                <h4 class="brand-title">سالن زیبایی</h4>
+            </div>
+            <button class="btn-close-sidebar" onclick="toggleSidebar()">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <i class="bi bi-speedometer2"></i>
+                    <span>داشبورد</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="customers.html" class="nav-link">
+                    <i class="bi bi-people"></i>
+                    <span>مشتریان</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="appointments.html" class="nav-link">
+                    <i class="bi bi-calendar3"></i>
+                    <span>نوبت‌دهی</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="services.html" class="nav-link">
+                    <i class="fas fa-spa"></i>
+                    <span>خدمات</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="staff.html" class="nav-link">
+                    <i class="bi bi-person-badge"></i>
+                    <span>پرسنل</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="finance.html" class="nav-link active">
+                    <i class="bi bi-cash-coin"></i>
+                    <span>مالی</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="inventory.html" class="nav-link">
+                    <i class="bi bi-box"></i>
+                    <span>انبار</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="reports.html" class="nav-link">
+                    <i class="bi bi-bar-chart"></i>
+                    <span>گزارش‌ها</span>
+                </a>
+            </li>
+        </ul>
+        
+        <div class="sidebar-footer">
+            <div class="user-profile">
+                <img src="https://via.placeholder.com/40x40/ffd700/000000?text=A" alt="پروفایل" class="user-avatar">
+                <div class="user-info">
+                    <span class="user-name">آریانا احمدی</span>
+                    <span class="user-role">مدیر سالن</span>
+                </div>
+            </div>
+            <button class="btn-logout">
+                <i class="bi bi-box-arrow-right"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <button class="btn-menu" onclick="toggleSidebar()">
+            <i class="bi bi-list"></i>
+        </button>
+        <h5 class="page-title">مالی</h5>
+        <div class="header-actions">
+            <button class="btn-notification">
+                <i class="bi bi-bell"></i>
+                <span class="notification-badge">3</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="page-header">
+            <h2>مدیریت مالی</h2>
+            <p class="page-subtitle">درآمد، هزینه و گزارش‌های مالی</p>
+        </div>
+
+        <!-- Financial Stats -->
+        <div class="row g-4 mb-4">
+            <div class="col-xl-3 col-md-6">
+                <div class="finance-card income">
+                    <div class="finance-icon">
+                        <i class="bi bi-arrow-up-circle"></i>
+                    </div>
+                    <div class="finance-content">
+                        <h4>15,600,000</h4>
+                        <p>درآمد این ماه</p>
+                        <span class="trend positive">+12% نسبت به ماه قبل</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="finance-card expense">
+                    <div class="finance-icon">
+                        <i class="bi bi-arrow-down-circle"></i>
+                    </div>
+                    <div class="finance-content">
+                        <h4>8,200,000</h4>
+                        <p>هزینه‌های این ماه</p>
+                        <span class="trend negative">+5% نسبت به ماه قبل</span>
+                </div>
+            </div>
+        </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="finance-card profit">
+                    <div class="finance-icon">
+                        <i class="bi bi-trophy"></i>
+                        </div>
+                    <div class="finance-content">
+                        <h4>7,400,000</h4>
+                        <p>سود خالص</p>
+                        <span class="trend positive">+18% نسبت به ماه قبل</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="finance-card pending">
+                    <div class="finance-icon">
+                        <i class="bi bi-clock"></i>
+                        </div>
+                    <div class="finance-content">
+                        <h4>1,200,000</h4>
+                        <p>پرداخت‌های معوق</p>
+                        <span class="trend neutral">3 فاکتور</span>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+
+        <!-- Recent Transactions -->
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">
+                            <i class="bi bi-credit-card me-2"></i>
+                            تراکنش‌های اخیر
+                        </h5>
+                        <button class="btn btn-primary btn-sm">
+                            <i class="bi bi-plus"></i>
+                            تراکنش جدید
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <div class="transaction-list">
+                            <div class="transaction-item income">
+                                <div class="transaction-icon">
+                                    <i class="bi bi-arrow-down-left"></i>
+                </div>
+                                <div class="transaction-content">
+                                    <h6>پرداخت سارا احمدی</h6>
+                                    <p>کوتاهی مو + میکاپ</p>
+                                    <span class="transaction-date">امروز - 14:30</span>
+            </div>
+                                <div class="transaction-amount income">
+                                    +450,000 تومان
+                        </div>
+                    </div>
+                            <div class="transaction-item expense">
+                                <div class="transaction-icon">
+                                    <i class="bi bi-arrow-up-right"></i>
+                        </div>
+                                <div class="transaction-content">
+                                    <h6>خرید مواد مصرفی</h6>
+                                    <p>شامپو و نرم‌کننده</p>
+                                    <span class="transaction-date">دیروز - 10:15</span>
+                        </div>
+                                <div class="transaction-amount expense">
+                                    -850,000 تومان
+                        </div>
+                    </div>
+                            <div class="transaction-item income">
+                                <div class="transaction-icon">
+                                    <i class="bi bi-arrow-down-left"></i>
+                    </div>
+                                <div class="transaction-content">
+                                    <h6>پرداخت فاطمه رضایی</h6>
+                                    <p>ناخن + ابرو</p>
+                                    <span class="transaction-date">دیروز - 16:45</span>
+                </div>
+                                <div class="transaction-amount income">
+                                    +320,000 تومان
+                        </div>
+                    </div>
+                            <div class="transaction-item expense">
+                                <div class="transaction-icon">
+                                    <i class="bi bi-arrow-up-right"></i>
+                        </div>
+                                <div class="transaction-content">
+                                    <h6>پرداخت حقوق</h6>
+                                    <p>حقوق پرسنل</p>
+                                    <span class="transaction-date">3 روز پیش - 12:00</span>
+                        </div>
+                                <div class="transaction-amount expense">
+                                    -2,500,000 تومان
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">
+                            <i class="bi bi-pie-chart me-2"></i>
+                            توزیع هزینه‌ها
+                        </h5>
+                        </div>
+                    <div class="card-body">
+                        <canvas id="expenseChart" height="250"></canvas>
+                </div>
+            </div>
+
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h5 class="card-title">
+                            <i class="bi bi-exclamation-triangle me-2"></i>
+                            پرداخت‌های معوق
+                        </h5>
+                        </div>
+                    <div class="card-body">
+                        <div class="pending-payments">
+                            <div class="payment-item">
+                                <div class="payment-info">
+                                    <h6>لیلا محمدی</h6>
+                                    <p>میکاپ مهمانی</p>
+                        </div>
+                                <div class="payment-amount">450,000 تومان</div>
+                    </div>
+                            <div class="payment-item">
+                                <div class="payment-info">
+                                    <h6>نازنین عزیزی</h6>
+                                    <p>رنگ مو</p>
+                        </div>
+                                <div class="payment-amount">650,000 تومان</div>
+                        </div>
+                            <div class="payment-item">
+                                <div class="payment-info">
+                                    <h6>زینب کریمی</h6>
+                                    <p>پکیج کامل</p>
+                        </div>
+                                <div class="payment-amount">980,000 تومان</div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

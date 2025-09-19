@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدیریت سالن زیبایی - گزارش‌ها</title>
+    
+    <!-- Bootstrap RTL -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    
+    <!-- Vazir Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="theme-light">
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <i class="bi bi-sun-fill light-icon"></i>
+        <i class="bi bi-moon-fill dark-icon"></i>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="brand-container">
+                <i class="fas fa-cut brand-icon"></i>
+                <h4 class="brand-title">سالن زیبایی</h4>
+            </div>
+            <button class="btn-close-sidebar" onclick="toggleSidebar()">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <i class="bi bi-speedometer2"></i>
+                    <span>داشبورد</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="customers.html" class="nav-link">
+                    <i class="bi bi-people"></i>
+                    <span>مشتریان</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="appointments.html" class="nav-link">
+                    <i class="bi bi-calendar3"></i>
+                    <span>نوبت‌دهی</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="services.html" class="nav-link">
+                    <i class="fas fa-spa"></i>
+                    <span>خدمات</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="staff.html" class="nav-link">
+                    <i class="bi bi-person-badge"></i>
+                    <span>پرسنل</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="finance.html" class="nav-link">
+                    <i class="bi bi-cash-coin"></i>
+                    <span>مالی</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="inventory.html" class="nav-link">
+                    <i class="bi bi-box"></i>
+                    <span>انبار</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="reports.html" class="nav-link active">
+                    <i class="bi bi-bar-chart"></i>
+                    <span>گزارش‌ها</span>
+                </a>
+            </li>
+        </ul>
+        
+        <div class="sidebar-footer">
+            <div class="user-profile">
+                <img src="https://via.placeholder.com/40x40/ffd700/000000?text=A" alt="پروفایل" class="user-avatar">
+                <div class="user-info">
+                    <span class="user-name">آریانا احمدی</span>
+                    <span class="user-role">مدیر سالن</span>
+                </div>
+            </div>
+            <button class="btn-logout">
+                <i class="bi bi-box-arrow-right"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <button class="btn-menu" onclick="toggleSidebar()">
+            <i class="bi bi-list"></i>
+        </button>
+        <h5 class="page-title">گزارش‌ها</h5>
+        <div class="header-actions">
+            <button class="btn-notification">
+                <i class="bi bi-bell"></i>
+                <span class="notification-badge">3</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="page-header">
+            <h2>مدیریت مشتریان</h2>
+            <p class="page-subtitle">مدیریت اطلاعات و پروفایل مشتریان</p>
+        </div>
+
+        <!-- Search and Actions -->
+        <div class="row g-4 mb-4">
+            <div class="col-lg-8">
+                <div class="search-container">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="جستجو در مشتریان..." id="customerSearch">
+                        <button class="btn btn-outline-secondary" type="button">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-flex gap-2">
+                    <button class="btn btn-primary flex-fill">
+                        <i class="bi bi-person-plus"></i>
+                        مشتری جدید
+                    </button>
+                    <button class="btn btn-outline-primary">
+                        <i class="bi bi-funnel"></i>
+                        فیلتر
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Customers Grid -->
+        <div class="row g-4">
+            <div class="col-xl-4 col-lg-6">
+                <div class="customer-card">
+                    <div class="customer-header">
+                        <img src="https://via.placeholder.com/60x60/e91e63/ffffff?text=س" alt="سارا احمدی" class="customer-avatar">
+                        <div class="customer-info">
+                            <h5>سارا احمدی</h5>
+                            <span class="customer-level vip">مشتری VIP</span>
+                        </div>
+                        <div class="customer-actions">
+                            <button class="btn btn-sm btn-outline-primary">
+                                <i class="bi bi-pencil"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="customer-body">
+                        <div class="customer-detail">
+                            <i class="bi bi-telephone"></i>
+                            <span>09123456789</span>
+                        </div>
+                        <div class="customer-detail">
+                            <i class="bi bi-calendar"></i>
+                            <span>آخرین ویزیت: 2 روز پیش</span>
+                        </div>
+                        <div class="customer-detail">
+                            <i class="bi bi-cash-coin"></i>
+                            <span>کل خرید: 2,450,000 تومان</span>
+                        </div>
+                        <div class="customer-detail">
+                            <i class="bi bi-gift"></i>
+                            <span>تولد: 15 آذر</span>
+                        </div>
+                    </div>
+                    <div class="customer-footer">
+                        <button class="btn btn-primary btn-sm">
+                            <i class="bi bi-calendar-plus"></i>
+                            نوبت جدید
+                        </button>
+                        <button class="btn btn-outline-secondary btn-sm">
+                            <i class="bi bi-eye"></i>
+                            مشاهده
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6">
+                <div class="customer-card">
+                    <div class="customer-header">
+                        <img src="https://via.placeholder.com/60x60/9c27b0/ffffff?text=ف" alt="فاطمه رضایی" class="customer-avatar">
+                        <div class="customer-info">
+                            <h5>فاطمه رضایی</h5>
+                            <span class="customer-level regular">مشتری عادی</span>
+                        </div>
+                        <div class="customer-actions">
+                            <button class="btn btn-sm btn-outline-primary">
+                                <i class="bi bi-pencil"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="customer-body">
+                        <div class="customer-detail">
+                            <i class="bi bi-telephone"></i>
+                            <span>09987654321</span>
+                        </div>
+                        <div class="customer-detail">
+                            <i class="bi bi-calendar"></i>
+                            <span>آخرین ویزیت: 1 هفته پیش</span>
+                        </div>
+                        <div class="customer-detail">
+                            <i class="bi bi-cash-coin"></i>
+                            <span>کل خرید: 850,000 تومان</span>
+                        </div>
+                        <div class="customer-detail">
+                            <i class="bi bi-gift"></i>
+                            <span>تولد: 8 بهمن</span>
+                        </div>
+                    </div>
+                    <div class="customer-footer">
+                        <button class="btn btn-primary btn-sm">
+                            <i class="bi bi-calendar-plus"></i>
+                            نوبت جدید
+                        </button>
+                        <button class="btn btn-outline-secondary btn-sm">
+                            <i class="bi bi-eye"></i>
+                            مشاهده
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6">
+                <div class="customer-card">
+                    <div class="customer-header">
+                        <img src="https://via.placeholder.com/60x60/00bcd4/ffffff?text=م" alt="مینا حسینی" class="customer-avatar">
+                        <div class="customer-info">
+                            <h5>مینا حسینی</h5>
+                            <span class="customer-level premium">مشتری پریمیوم</span>
+                        </div>
+                        <div class="customer-actions">
+                            <button class="btn btn-sm btn-outline-primary">
+                                <i class="bi bi-pencil"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="customer-body">
+                        <div class="customer-detail">
+                            <i class="bi bi-telephone"></i>
+                            <span>09111222333</span>
+                        </div>
+                        <div class="customer-detail">
+                            <i class="bi bi-calendar"></i>
+                            <span>آخرین ویزیت: امروز</span>
+                        </div>
+                        <div class="customer-detail">
+                            <i class="bi bi-cash-coin"></i>
+                            <span>کل خرید: 1,750,000 تومان</span>
+                        </div>
+                        <div class="customer-detail">
+                            <i class="bi bi-gift"></i>
+                            <span>تولد: 22 خرداد</span>
+                        </div>
+                    </div>
+                    <div class="customer-footer">
+                        <button class="btn btn-primary btn-sm">
+                            <i class="bi bi-calendar-plus"></i>
+                            نوبت جدید
+                        </button>
+                        <button class="btn btn-outline-secondary btn-sm">
+                            <i class="bi bi-eye"></i>
+                            مشاهده
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6">
+                <div class="customer-card">
+                    <div class="customer-header">
+                        <img src="https://via.placeholder.com/60x60/ff9800/ffffff?text=ل" alt="لیلا محمدی" class="customer-avatar">
+                        <div class="customer-info">
+                            <h5>لیلا محمدی</h5>
+                            <span class="customer-level regular">مشتری عادی</span>
+                        </div>
+                        <div class="customer-actions">
+                            <button class="btn btn-sm btn-outline-primary">
+                                <i class="bi bi-pencil"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="customer-body">
+                        <div class="customer-detail">
+                            <i class="bi bi-telephone"></i>
+                            <span>09334455667</span>
+                        </div>
+                        <div class="customer-detail">
+                            <i class="bi bi-calendar"></i>
+                            <span>آخرین ویزیت: 3 هفته پیش</span>
+                        </div>
+                        <div class="customer-detail">
+                            <i class="bi bi-cash-coin"></i>
+                            <span>کل خرید: 420,000 تومان</span>
+                        </div>
+                        <div class="customer-detail">
+                            <i class="bi bi-gift"></i>
+                            <span>تولد: 12 مهر</span>
+                        </div>
+                    </div>
+                    <div class="customer-footer">
+                        <button class="btn btn-primary btn-sm">
+                            <i class="bi bi-calendar-plus"></i>
+                            نوبت جدید
+                        </button>
+                        <button class="btn btn-outline-secondary btn-sm">
+                            <i class="bi bi-eye"></i>
+                            مشاهده
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6">
+                <div class="customer-card">
+                    <div class="customer-header">
+                        <img src="https://via.placeholder.com/60x60/4caf50/ffffff?text=ن" alt="نازنین عزیزی" class="customer-avatar">
+                        <div class="customer-info">
+                            <h5>نازنین عزیزی</h5>
+                            <span class="customer-level vip">مشتری VIP</span>
+                        </div>
+                        <div class="customer-actions">
+                            <button class="btn btn-sm btn-outline-primary">
+                                <i class="bi bi-pencil"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="customer-body">
+                        <div class="customer-detail">
+                            <i class="bi bi-telephone"></i>
+                            <span>09188776655</span>
+                        </div>
+                        <div class="customer-detail">
+                            <i class="bi bi-calendar"></i>
+                            <span>آخرین ویزیت: دیروز</span>
+                        </div>
+                        <div class="customer-detail">
+                            <i class="bi bi-cash-coin"></i>
+                            <span>کل خرید: 3,200,000 تومان</span>
+                        </div>
+                        <div class="customer-detail">
+                            <i class="bi bi-gift"></i>
+                            <span>تولد: 5 اسفند</span>
+                        </div>
+                    </div>
+                    <div class="customer-footer">
+                        <button class="btn btn-primary btn-sm">
+                            <i class="bi bi-calendar-plus"></i>
+                            نوبت جدید
+                        </button>
+                        <button class="btn btn-outline-secondary btn-sm">
+                            <i class="bi bi-eye"></i>
+                            مشاهده
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6">
+                <div class="customer-card">
+                    <div class="customer-header">
+                        <img src="https://via.placeholder.com/60x60/795548/ffffff?text=ز" alt="زینب کریمی" class="customer-avatar">
+                        <div class="customer-info">
+                            <h5>زینب کریمی</h5>
+                            <span class="customer-level premium">مشتری پریمیوم</span>
+                        </div>
+                        <div class="customer-actions">
+                            <button class="btn btn-sm btn-outline-primary">
+                                <i class="bi bi-pencil"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="customer-body">
+                        <div class="customer-detail">
+                            <i class="bi bi-telephone"></i>
+                            <span>09125556677</span>
+                        </div>
+                        <div class="customer-detail">
+                            <i class="bi bi-calendar"></i>
+                            <span>آخرین ویزیت: 5 روز پیش</span>
+                        </div>
+                        <div class="customer-detail">
+                            <i class="bi bi-cash-coin"></i>
+                            <span>کل خرید: 1,980,000 تومان</span>
+                        </div>
+                        <div class="customer-detail">
+                            <i class="bi bi-gift"></i>
+                            <span>تولد: 18 شهریور</span>
+                        </div>
+                    </div>
+                    <div class="customer-footer">
+                        <button class="btn btn-primary btn-sm">
+                            <i class="bi bi-calendar-plus"></i>
+                            نوبت جدید
+                        </button>
+                        <button class="btn btn-outline-secondary btn-sm">
+                            <i class="bi bi-eye"></i>
+                            مشاهده
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="d-flex justify-content-center mt-4">
+            <nav>
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">قبلی</a>
+                    </li>
+                    <li class="page-item active">
+                        <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">بعدی</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

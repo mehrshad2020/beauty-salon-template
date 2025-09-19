@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدیریت سالن زیبایی - داشبورد</title>
+    
+    <!-- Bootstrap RTL -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    
+    <!-- Vazir Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="theme-light">
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <i class="bi bi-sun-fill light-icon"></i>
+        <i class="bi bi-moon-fill dark-icon"></i>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="brand-container">
+                <i class="fas fa-cut brand-icon"></i>
+                <h4 class="brand-title">سالن زیبایی</h4>
+            </div>
+            <button class="btn-close-sidebar" onclick="toggleSidebar()">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link active">
+                    <i class="bi bi-speedometer2"></i>
+                    <span>داشبورد</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="customers.html" class="nav-link">
+                    <i class="bi bi-people"></i>
+                    <span>مشتریان</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="appointments.html" class="nav-link">
+                    <i class="bi bi-calendar3"></i>
+                    <span>نوبت‌دهی</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="services.html" class="nav-link">
+                    <i class="fas fa-spa"></i>
+                    <span>خدمات</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="staff.html" class="nav-link">
+                    <i class="bi bi-person-badge"></i>
+                    <span>پرسنل</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="finance.html" class="nav-link">
+                    <i class="bi bi-cash-coin"></i>
+                    <span>مالی</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="inventory.html" class="nav-link">
+                    <i class="bi bi-box"></i>
+                    <span>انبار</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="reports.html" class="nav-link">
+                    <i class="bi bi-bar-chart"></i>
+                    <span>گزارش‌ها</span>
+                </a>
+            </li>
+        </ul>
+        
+        <div class="sidebar-footer">
+            <div class="user-profile">
+                <img src="https://via.placeholder.com/40x40/ffd700/000000?text=A" alt="پروفایل" class="user-avatar">
+                <div class="user-info">
+                    <span class="user-name">آریانا احمدی</span>
+                    <span class="user-role">مدیر سالن</span>
+                </div>
+            </div>
+            <button class="btn-logout">
+                <i class="bi bi-box-arrow-right"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <button class="btn-menu" onclick="toggleSidebar()">
+            <i class="bi bi-list"></i>
+        </button>
+        <h5 class="page-title">داشبورد</h5>
+        <div class="header-actions">
+            <button class="btn-notification">
+                <i class="bi bi-bell"></i>
+                <span class="notification-badge">3</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Dashboard Page -->
+        <div class="page-header">
+            <h2>داشبورد</h2>
+            <p class="page-subtitle">نمای کلی سالن زیبایی شما</p>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="row g-4 mb-4">
+            <div class="col-xl-3 col-md-6">
+                <div class="stat-card stat-card-primary">
+                    <div class="stat-icon">
+                        <i class="bi bi-calendar-check"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>12</h3>
+                        <p>نوبت‌های امروز</p>
+                    </div>
+                    <div class="stat-trend positive">
+                        <i class="bi bi-arrow-up"></i>
+                        <span>+15%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="stat-card stat-card-success">
+                    <div class="stat-icon">
+                        <i class="bi bi-cash-coin"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>2,450,000</h3>
+                        <p>درآمد امروز (تومان)</p>
+                    </div>
+                    <div class="stat-trend positive">
+                        <i class="bi bi-arrow-up"></i>
+                        <span>+8%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="stat-card stat-card-warning">
+                    <div class="stat-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>234</h3>
+                        <p>کل مشتریان</p>
+                    </div>
+                    <div class="stat-trend positive">
+                        <i class="bi bi-arrow-up"></i>
+                        <span>+12%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="stat-card stat-card-info">
+                    <div class="stat-icon">
+                        <i class="bi bi-star"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>4.8</h3>
+                        <p>رضایت مشتریان</p>
+                    </div>
+                    <div class="stat-trend positive">
+                        <i class="bi bi-arrow-up"></i>
+                        <span>+0.2</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Today's Appointments -->
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">
+                            <i class="bi bi-calendar-day me-2"></i>
+                            نوبت‌های امروز
+                        </h5>
+                        <button class="btn btn-primary btn-sm">
+                            <i class="bi bi-plus"></i>
+                            نوبت جدید
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <div class="appointment-list">
+                            <div class="appointment-item">
+                                <div class="appointment-time">09:00</div>
+                                <div class="appointment-info">
+                                    <h6>سارا احمدی</h6>
+                                    <p>کوتاهی مو + میکاپ</p>
+                                    <span class="badge bg-success">تایید شده</span>
+                                </div>
+                                <div class="appointment-staff">
+                                    <img src="https://via.placeholder.com/32x32/e91e63/ffffff?text=م" alt="مریم">
+                                    <span>مریم کریمی</span>
+                                </div>
+                            </div>
+                            <div class="appointment-item">
+                                <div class="appointment-time">10:30</div>
+                                <div class="appointment-info">
+                                    <h6>فاطمه رضایی</h6>
+                                    <p>ناخن + ابرو</p>
+                                    <span class="badge bg-warning">انتظار</span>
+                                </div>
+                                <div class="appointment-staff">
+                                    <img src="https://via.placeholder.com/32x32/9c27b0/ffffff?text=ز" alt="زهرا">
+                                    <span>زهرا احمدی</span>
+                                </div>
+                            </div>
+                            <div class="appointment-item">
+                                <div class="appointment-time">14:00</div>
+                                <div class="appointment-info">
+                                    <h6>مینا حسینی</h6>
+                                    <p>رنگ مو + فر</p>
+                                    <span class="badge bg-success">تایید شده</span>
+                                </div>
+                                <div class="appointment-staff">
+                                    <img src="https://via.placeholder.com/32x32/e91e63/ffffff?text=م" alt="مریم">
+                                    <span>مریم کریمی</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions & Reminders -->
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title">
+                            <i class="bi bi-lightning me-2"></i>
+                            دسترسی سریع
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="quick-actions">
+                            <button class="quick-action-btn">
+                                <i class="bi bi-plus-circle"></i>
+                                <span>نوبت جدید</span>
+                            </button>
+                            <button class="quick-action-btn">
+                                <i class="bi bi-person-plus"></i>
+                                <span>مشتری جدید</span>
+                            </button>
+                            <button class="quick-action-btn">
+                                <i class="bi bi-receipt"></i>
+                                <span>ثبت پرداخت</span>
+                            </button>
+                            <button class="quick-action-btn">
+                                <i class="bi bi-box-seam"></i>
+                                <span>مشاهده انبار</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">
+                            <i class="bi bi-bell me-2"></i>
+                            یادآورها
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="reminder-list">
+                            <div class="reminder-item">
+                                <div class="reminder-icon bg-warning">
+                                    <i class="bi bi-gift"></i>
+                                </div>
+                                <div class="reminder-content">
+                                    <h6>تولد مشتری</h6>
+                                    <p>سارا احمدی - امروز</p>
+                                </div>
+                            </div>
+                            <div class="reminder-item">
+                                <div class="reminder-icon bg-danger">
+                                    <i class="bi bi-exclamation-triangle"></i>
+                                </div>
+                                <div class="reminder-content">
+                                    <h6>کمبود موجودی</h6>
+                                    <p>شامپو کراتینه</p>
+                                </div>
+                            </div>
+                            <div class="reminder-item">
+                                <div class="reminder-icon bg-info">
+                                    <i class="bi bi-clock"></i>
+                                </div>
+                                <div class="reminder-content">
+                                    <h6>نوبت فردا</h6>
+                                    <p>مینا حسینی - 10:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="row g-4 mt-2">
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">
+                            <i class="bi bi-graph-up me-2"></i>
+                            نمودار درآمد هفتگی
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="revenueChart" height="300"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">
+                            <i class="bi bi-pie-chart me-2"></i>
+                            خدمات پرطرفدار
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="servicesChart" height="300"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
